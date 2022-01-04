@@ -8,5 +8,5 @@
 	alt="${product.name}"
 >
 	<img src={product.image} alt={product.name} />
-	<h2 class="uppercase text-2xl">{product.name}</h2>
+	<h2 class="uppercase text-lg">{product.name}</h2>
 </a>

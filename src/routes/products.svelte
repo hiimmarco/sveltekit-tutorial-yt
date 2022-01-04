@@ -11,7 +11,7 @@
 	dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
 	amet. Lorem ipsum dolor sit amet
 </p>
-<div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
+<div class="py-4 grid gap-4 md:grid-cols-4 grid-cols-2">
 	{#each $products as product}
 		<Productcard {product} />
 	{/each}
