@@ -1,5 +1,6 @@
 <script>
 	import { products } from '../stores/productstore';
+	import Productcard from '../components/productcard.svelte';
 </script>
 
 <svelte:head><title>Liste mit Produkten</title></svelte:head>
@@ -10,8 +11,8 @@
 	dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
 	amet. Lorem ipsum dolor sit amet
 </p>
-<ul>
+<div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
 	{#each $products as product}
-		<ul class="ml-8 mt-8">{product.name}</ul>
+		<Productcard {product} />
 	{/each}
-</ul>
+</div>
