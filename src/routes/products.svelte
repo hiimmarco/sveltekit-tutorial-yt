@@ -1,6 +1,11 @@
-<script>
-	import { products } from '../stores/productstore';
+<script context="module">
 	import Productcard from '../components/productcard.svelte';
+
+	import { products, getProducts } from '../stores/productstore';
+	export async function load(ctx) {
+		await getProducts();
+		return { props: { products } };
+	}
 </script>
 
 <svelte:head><title>Liste mit Produkten</title></svelte:head>
