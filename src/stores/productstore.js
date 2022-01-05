@@ -2,6 +2,7 @@ import { writable } from 'svelte/store';
 import { postToShopify } from '../routes/api/utils/postToShopify';
 
 export const products = writable([]);
+export const singleProduct = writable([]);
 
 export const getProducts = async () => {
 	try {
