@@ -10,7 +10,7 @@ const config = {
 
 		target: '#svelte',
 		ssr: true,
-		trailingSlash: 'always',
+		trailingSlash: 'never',
 		vite: () => ({})
 	}
 };
