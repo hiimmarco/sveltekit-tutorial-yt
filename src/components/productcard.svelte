@@ -1,4 +1,5 @@
 <script>
+	import { formatPrice } from '../stores/productstore';
 	export let product;
 </script>
 
@@ -9,11 +10,9 @@
 >
 	<img
 		src={product.node.images.edges[0].node.url}
-		alt="Bud Spencer eating"
-		width="995"
-		height="562"
+		alt={product.node.images.edges[0].node.altText}
 	/>
 	<h2 class="uppercase text-lg">{product.node.title}</h2>
 	<p>{product.node.description}</p>
-	<p>{product.node.priceRange.minVariantPrice.amount}</p>
+	<p>{formatPrice(product.node.priceRange.minVariantPrice.amount)}</p>
 </a>
