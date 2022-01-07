@@ -1,12 +1,10 @@
-import adapter from '@sveltejs/adapter-static';
+import cloudflare from '@sveltejs/adapter-cloudflare';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
 	kit: {
-		adapter: adapter(),
-		// ... truncated ...
-		target: '#svelte'
+		target: '#svelte',
+		adapter: cloudflare({
+			// any esbuild options
+		})
 	}
 };
-
-export default config;
