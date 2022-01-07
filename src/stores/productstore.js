@@ -8,16 +8,29 @@ export const getProducts = async () => {
 	try {
 		const shopifyResponse = await postToShopify({
 			query: `{
-				products(first: 10) {
+				products (first: 10) {
 					edges {
 						node {
 							id
 							title
-							description
 							handle
+							description
+							priceRange {
+								minVariantPrice {
+									amount
+								}
+							}
+							images (first: 1) {
+								edges {
+									node{
+										url
+									}
+								}
+
+							}
+							}
 						}
 					}
-				}
 				}`
 		});
 		products.set(shopifyResponse.products.edges);

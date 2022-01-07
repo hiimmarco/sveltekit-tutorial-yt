@@ -7,6 +7,13 @@
 	href="/p/{product.node.handle}"
 	alt="${product.title}"
 >
+	<img
+		src={product.node.images.edges[0].node.url}
+		alt="Bud Spencer eating"
+		width="995"
+		height="562"
+	/>
 	<h2 class="uppercase text-lg">{product.node.title}</h2>
 	<p>{product.node.description}</p>
+	<p>{product.node.priceRange.minVariantPrice.amount}</p>
 </a>
