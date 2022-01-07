@@ -8,7 +8,10 @@ const config = {
 
 		// ... truncated ...
 
-		target: '#svelte'
+		target: '#svelte',
+		ssr: true,
+		trailingSlash: 'always',
+		vite: () => ({})
 	}
 };
 
