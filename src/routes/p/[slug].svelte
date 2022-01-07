@@ -3,12 +3,8 @@
 	export async function load(ctx) {
 		let slug = ctx.params.slug;
 		await getSingleProduct(slug);
-		return { props: { slug, singleProduct } };
+		return { props: { singleProduct } };
 	}
-</script>
-
-<script>
-	export let slug;
 </script>
 
 <!-- <script>
