@@ -3,16 +3,21 @@
 	export let product;
 </script>
 
-<a
-	class="list-none p-6 bg-gray-100 text-gray-800 text-center rounded-md shadow-sm hover:shadow-md flex flex-col items-center"
-	href="/p/{product.node.handle}"
-	alt="${product.title}"
+<div
+	class="list-none border-solid border-2 border-red-800 text-gray-800 text-left rounded-md flex flex-col items-start"
 >
-	<img
-		src={product.node.images.edges[0].node.url}
-		alt={product.node.images.edges[0].node.altText}
-	/>
-	<h2 class="uppercase text-lg">{product.node.title}</h2>
-	<p>{product.node.description}</p>
-	<p>{formatPrice(product.node.priceRange.minVariantPrice.amount)}</p>
-</a>
+	<a href="/p/{product.node.handle}" alt="${product.title}">
+		<img
+			src={product.node.images.edges[0].node.url}
+			alt={product.node.images.edges[0].node.altText}
+			class="mb-4 rounded-xl"
+		/>
+		<h2 class="text-lg font-bold">{product.node.title}</h2>
+	</a>
+	<div class="flex flex-row mt-2">
+		<p class="font-medium text-lg">
+			{formatPrice(product.node.priceRange.minVariantPrice.amount)}
+		</p>
+		<button class="bg-green-700 text-white px-4 py-2 rounded-full mt-4">+</button>
+	</div>
+</div>
