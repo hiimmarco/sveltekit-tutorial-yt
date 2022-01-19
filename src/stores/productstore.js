@@ -9,7 +9,7 @@ export const getProducts = async () => {
 	try {
 		const shopifyResponse = await postToShopify({
 			query: `{
-				products (first: 10) {
+				products (first: 150) {
 					edges {
 						node {
 							id
@@ -21,7 +21,7 @@ export const getProducts = async () => {
 									amount
 								}
 							}
-							images (first: 1) {
+							images (first: 2) {
 								edges {
 									node{
 										url
