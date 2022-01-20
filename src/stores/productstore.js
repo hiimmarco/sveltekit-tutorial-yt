@@ -9,26 +9,40 @@ export const getProducts = async () => {
 	try {
 		const shopifyResponse = await postToShopify({
 			query: `{
-				products (first: 150) {
+				products (first: 11) {
 					edges {
 						node {
 							id
 							title
 							handle
+							availableForSale
+							totalInventory
+							vendor
 							description
 							priceRange {
 								minVariantPrice {
 									amount
 								}
 							}
-							images (first: 2) {
+							images (first: 1) {
 								edges {
 									node{
 										url
 										altText
 									}
 								}
+							}
+							availableForSale
+							variants (first: 1) {
+								edges {
+									node {
+										quantityAvailable
+										availableForSale
+										weightUnit
+										weight
 
+									}
+								}
 							}
 							}
 						}
@@ -66,7 +80,7 @@ export const getSingleProduct = async (handle) => {
 									amount
 								}
 							}
-							images (first: 1) {
+							images (first: 5) {
 								edges {
 									node{
 										url

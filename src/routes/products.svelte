@@ -13,7 +13,7 @@
 <p class="max-w-2xl text-center mx-auto mb-6">
 	Über 1.000 regionale Produkte von Kleinbetrieben direkt zu dir nach Hause
 </p>
-<div class="py-4 grid gap-4 md:grid-cols-4 grid-cols-2">
+<div class="py-8 grid gap-8 md:grid-cols-4 grid-cols-2">
 	{#each $products as product}
 		<Productcard {product} />
 	{/each}
