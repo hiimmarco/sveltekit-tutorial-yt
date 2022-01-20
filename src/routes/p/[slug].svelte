@@ -20,6 +20,10 @@
 		}
 		quantity -= 1;
 	}
+
+	function addToCart() {
+		console.log('add to cart');
+	}
 </script>
 
 <!-- Create html elements -->
@@ -42,6 +46,8 @@
 			<button class="px-4 py-2 bg-green-400 rounded-md" on:click={increaseQuantity}>+</button>
 		</div>
 
-		<button class="bg-green-700 text-white px-4 py-2 rounded-md">Zum Warenkorb</button>
+		<button class="bg-green-700 text-white px-4 py-2 rounded-md" on:click={addToCart}
+			>Zum Warenkorb</button
+		>
 	</div>
 </div>
